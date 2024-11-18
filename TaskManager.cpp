@@ -10,10 +10,24 @@ void TaskManager::addTask(const Task& task) {
     tasksList.emplace_back(task);
 }
 
-void TaskManager::displayTasks(){
+void TaskManager::displayTasks() {
     std::cout << "Here is tasks list: " << std::endl;
-    for (auto& task: tasksList) {
+    int index = 0;
+    for (auto& task : tasksList) {
+        std::cout << "[" << index << "] ";
         task.getTaskName();
         std::cout << std::endl;
+        ++index;
     }
+}
+
+
+void TaskManager::enterTask(int index) {
+    if(index >= 0 && index < tasksList.size())
+    {
+       auto it = std::next(tasksList.begin(), index);
+       it->taskDisplayInfo();
+    }
+    else
+        std::cout<< "Wrong task index \n";
 }

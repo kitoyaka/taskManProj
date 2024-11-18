@@ -12,7 +12,8 @@ public:
     void taskCreation();
     void setTaskCompleted();
     void getTaskName();
-
+    bool isTaskCompleted();
+    void taskDisplayInfo();
 private:
     std::string taskName;
     std::string taskDescription;

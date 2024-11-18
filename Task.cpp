@@ -7,11 +7,11 @@
 
 
 void Task::taskCreation() {
-    std::cin.ignore();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
     std::cout << "Enter task name: ";
-    std::cin >> taskName;
+    std::getline(std::cin, taskName);
     std::cout << std::endl << "Add any description for task: ";
-    std::cin >> taskDescription;
+    std::getline(std::cin, taskDescription);
     taskStatus = 0;
 }
 
@@ -19,7 +19,18 @@ void Task::getTaskName() {
     std::cout << taskName;
 }
 
+bool Task::isTaskCompleted() {
+    return taskStatus;
+}
+
 void Task::setTaskCompleted() {
     taskStatus = 1;
 }
+
+void Task::taskDisplayInfo() {
+    std::cout << "Task Name: " << taskName << std::endl;
+    std::cout << "Description: " << taskDescription << std::endl;
+    std::cout << "Status: " << (taskStatus == 1 ? "Completed" : "Not Completed") << std::endl;
+}
+
 

@@ -9,7 +9,8 @@ void menuDescription(TaskManager& taskManager) {
         std::cout << "\n=== Menu ===\n";
         std::cout << "[1] Create new task\n";
         std::cout << "[2] Display all tasks\n";
-        std::cout << "[3] Exit\n";
+        std::cout << "[3] Info about task\n";
+        std::cout << "[4] Exit\n";
         std::cout << "Your choice: ";
         std::cin >> answer;
 
@@ -24,8 +25,12 @@ void menuDescription(TaskManager& taskManager) {
                 taskManager.displayTasks();
                 break;
             }
-            case 3: {
-                std::cout << "Exit\n";
+            case 3:{
+                int taskIndex;
+                std::cout << "Enter task index: ";
+                std::cin >> taskIndex;
+                std::cout << "\n";
+                taskManager.enterTask(taskIndex);
                 break;
             }
             default: {
@@ -33,7 +38,7 @@ void menuDescription(TaskManager& taskManager) {
                 break;
             }
         }
-    } while (answer != 3);
+    } while (answer != 4);
 }
 
 
