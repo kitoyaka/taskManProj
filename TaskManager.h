@@ -11,7 +11,7 @@ class TaskManager {
 public:
     void addTask(const Task&);
     void displayTasks();
-    void setTaskCompleted();
+
 
 private:
     std::list<Task> tasksList;

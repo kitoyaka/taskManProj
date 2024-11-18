@@ -10,7 +10,7 @@ class Task {
 
 public:
     void taskCreation();
-    void taskSetStatus();
+    void setTaskCompleted();
     void getTaskName();
 
 private:

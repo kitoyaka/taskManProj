@@ -14,5 +14,6 @@ void TaskManager::displayTasks(){
     std::cout << "Here is tasks list: " << std::endl;
     for (auto& task: tasksList) {
         task.getTaskName();
+        std::cout << std::endl;
     }
 }
