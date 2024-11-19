@@ -32,5 +32,10 @@ void Task::taskDisplayInfo() {
     std::cout << "Description: " << taskDescription << std::endl;
     std::cout << "Status: " << (taskStatus == 1 ? "Completed" : "Not Completed") << std::endl;
 }
-
+void Task::taskEditing() {
+    std::cout << "Edit task name: ";
+    std::cin >> taskName;
+    std::cout << "\n" << "Edit task description: ";
+    std::cin >> taskDescription;
+}
 

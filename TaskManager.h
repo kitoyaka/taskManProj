@@ -13,6 +13,8 @@ public:
     void displayTasks();
     void enterTask(int index);
     void setTaskCompleted(int index);
+    void taskDeletion(int index);
+    void taskEdition(int index);
 
 private:
     std::list<Task> tasksList;

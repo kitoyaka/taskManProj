@@ -41,3 +41,24 @@ void TaskManager::setTaskCompleted(int index) {
     else
         std::cout<< "Wrong task index \n";
 }
+
+void TaskManager::taskDeletion(int index) {
+    if(index >= 0 && index < tasksList.size())
+    {
+        auto it = std::next(tasksList.begin(), index);
+        tasksList.erase(it);
+    }
+    else
+        std::cout<< "Wrong task index \n";
+
+}
+
+void TaskManager::taskEdition(int index) {
+    if(index >= 0 && index < tasksList.size())
+    {
+        auto it = std::next(tasksList.begin(), index);
+        it->taskEditing();
+    }
+    else
+        std::cout << "Wrong task index \n";
+}

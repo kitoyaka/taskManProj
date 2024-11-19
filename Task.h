@@ -14,6 +14,8 @@ public:
     void getTaskName();
     bool isTaskCompleted();
     void taskDisplayInfo();
+    void taskEditing();
+
 private:
     std::string taskName;
     std::string taskDescription;

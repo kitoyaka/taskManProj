@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Task.h"
 #include "TaskManager.h"
-#include "libConnect.h"
+
 
 void menuDescription(TaskManager& taskManager) {
     short int answer;
@@ -11,6 +11,8 @@ void menuDescription(TaskManager& taskManager) {
         std::cout << "[2] Display all tasks\n";
         std::cout << "[3] Info about task\n";
         std::cout << "[4] Set task completed\n";
+        std::cout << "[5] Delete task\n";
+        std::cout << "[6] Task edit\n";
         std::cout << "[9] Exit\n";
         std::cout << "Your choice: ";
         std::cin >> answer;
@@ -42,7 +44,23 @@ void menuDescription(TaskManager& taskManager) {
                 taskManager.setTaskCompleted(taskIndex);
                 break;
             }
+            case 5: {
+                int taskIndex;
+                std::cout << "Enter task index: ";
+                std::cin>> taskIndex;
+                std::cout << "\n";
+                taskManager.taskDeletion(taskIndex);
+                break;
+            }
+            case 6:{
+                int taskIndex;
+                std::cout << "Enter task index: ";
+                std::cin>> taskIndex;
+                std::cout << "\n";
+                taskManager.taskEdition(taskIndex);
 
+                break;
+            }
             default: {
                 std::cout << "Try again!.\n";
                 break;
