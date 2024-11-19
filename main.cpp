@@ -10,7 +10,8 @@ void menuDescription(TaskManager& taskManager) {
         std::cout << "[1] Create new task\n";
         std::cout << "[2] Display all tasks\n";
         std::cout << "[3] Info about task\n";
-        std::cout << "[4] Exit\n";
+        std::cout << "[4] Set task completed\n";
+        std::cout << "[9] Exit\n";
         std::cout << "Your choice: ";
         std::cin >> answer;
 
@@ -33,15 +34,22 @@ void menuDescription(TaskManager& taskManager) {
                 taskManager.enterTask(taskIndex);
                 break;
             }
+            case 4:{
+                int taskIndex;
+                std::cout << "Enter task index: ";
+                std::cin>> taskIndex;
+                std::cout << "\n";
+                taskManager.setTaskCompleted(taskIndex);
+                break;
+            }
+
             default: {
                 std::cout << "Try again!.\n";
                 break;
             }
         }
-    } while (answer != 4);
+    } while (answer != 9);
 }
-
-
 
 
 int main() {

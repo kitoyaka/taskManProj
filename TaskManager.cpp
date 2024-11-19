@@ -31,3 +31,13 @@ void TaskManager::enterTask(int index) {
     else
         std::cout<< "Wrong task index \n";
 }
+
+void TaskManager::setTaskCompleted(int index) {
+    if(index >= 0 && index < tasksList.size())
+    {
+        auto it = std::next(tasksList.begin(), index);
+        it->setTaskCompleted();
+    }
+    else
+        std::cout<< "Wrong task index \n";
+}
