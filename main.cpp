@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Task.h"
 #include "TaskManager.h"
-
+#include "libConnect.h"
 
 void menuDescription(TaskManager& taskManager) {
     short int answer;
