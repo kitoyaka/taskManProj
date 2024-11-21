@@ -15,7 +15,8 @@ public:
     void setTaskCompleted(int index);
     void taskDeletion(int index);
     void taskEdition(int index);
-
+    void saveToFile(const std::string& filename);
+    void loadFromFile(const std::string& filename);
 private:
     std::list<Task> tasksList;
 };

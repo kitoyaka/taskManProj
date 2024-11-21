@@ -1,8 +1,8 @@
 #include <iostream>
 #include "Task.h"
 #include "TaskManager.h"
-#include "libConnect.h"
 
+std::string filename = "list.json";
 void menuDescription(TaskManager& taskManager) {
     short int answer;
     do {
@@ -61,6 +61,11 @@ void menuDescription(TaskManager& taskManager) {
 
                 break;
             }
+            case 9:{
+                std::cout << "Exiting";
+                taskManager.saveToFile(filename);
+            }
+
             default: {
                 std::cout << "Try again!.\n";
                 break;
@@ -71,7 +76,11 @@ void menuDescription(TaskManager& taskManager) {
 
 
 int main() {
+
     TaskManager taskManager;
+
+    taskManager.loadFromFile(filename);
+
     menuDescription(taskManager);
     return 0;
 

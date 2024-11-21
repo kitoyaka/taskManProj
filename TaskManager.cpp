@@ -62,3 +62,26 @@ void TaskManager::taskEdition(int index) {
     else
         std::cout << "Wrong task index \n";
 }
+
+void TaskManager::saveToFile(const std::string &filename) {
+    nlohmann::json jsonTasks;
+    for(const auto& task : tasksList){
+        jsonTasks.push_back(task.toJSON());
+    }
+    std::ofstream file(filename);
+    file << jsonTasks.dump(4);
+    file.close();
+}
+
+void TaskManager::loadFromFile(const std::string &filename) {
+    std::ifstream file(filename);
+    if(file.is_open())
+    {
+        nlohmann::json  jsonTasks;
+        file >> jsonTasks;
+        tasksList.clear();
+        for (const auto& jsonTasks : jsonTasks) {
+            tasksList.push_back(Task::fromJSON(jsonTasks));
+        }
+    }
+}
