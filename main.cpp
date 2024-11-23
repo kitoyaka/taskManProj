@@ -76,11 +76,8 @@ void menuDescription(TaskManager& taskManager) {
 
 
 int main() {
-
     TaskManager taskManager;
-
     taskManager.loadFromFile(filename);
-
     menuDescription(taskManager);
     return 0;
 
