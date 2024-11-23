@@ -12,25 +12,26 @@ Functionality:
 How to run: 
 1. Cloning the repository
 Copy the project to your computer:
-git clone https://github.com/kitoyaka/taskManProj.git
-cd taskManProj
+-   git clone https://github.com/kitoyaka/taskManProj.git
+-   cd taskManProj
 
 2. Install the dependencies
 Make sure you have installed:
-CMake (version 3.15 or later)
-Compiler with C++20 support
-The nlohmann/json library (already integrated via FetchContent)
+-   CMake (version 3.15 or later)
+-   Compiler with C++20 support
+-   The nlohmann/json library (already integrated via FetchContent)
 
 3. Building the project
 Create a folder for the build:
-mkdir build && cd build
+-   mkdir build && cd build
 
 Use CMake to generate the build files:
-cmake ..
+-   cmake ..
 
 Build the project:
-cmake --build .
+-   cmake --build .
 
 4. Run the program
-./taskManProj
+-   ./taskManProj
+
 
