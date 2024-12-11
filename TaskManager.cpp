@@ -51,6 +51,7 @@ void TaskManager::taskDeletion(int index) {
     else
         std::cout<< "Wrong task index \n";
 
+
 }
 
 void TaskManager::taskEdition(int index) {

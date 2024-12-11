@@ -12,7 +12,7 @@ public:
     void taskCreation();
     void setTaskCompleted();
     void getTaskName();
-    bool isTaskCompleted();
+
     void taskDisplayInfo();
     void taskEditing();
 

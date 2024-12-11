@@ -19,9 +19,6 @@ void Task::getTaskName() {
     std::cout << taskName;
 }
 
-bool Task::isTaskCompleted() {
-    return taskStatus;
-}
 
 void Task::setTaskCompleted() {
     taskStatus = 1;
